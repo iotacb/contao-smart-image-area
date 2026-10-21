@@ -1,0 +1,43 @@
+{
+    "name": "iotacb/contao-smart-image-area",
+    "description": "Automatic important image areas using local face detection, object detection and visual saliency for Contao 5.7",
+    "type": "contao-bundle",
+    "keywords": ["contao", "image", "important part", "focal point", "face detection", "object detection", "mediapipe"],
+    "license": "LGPL-3.0-or-later",
+    "authors": [{
+        "name": "iotacb - Christopher Brandt",
+        "homepage": "https://chrisbrandt.xyz"
+    }],
+    "support": {
+        "issues": "https://github.com/iotacb/contao-smart-image-area/issues",
+        "source": "https://github.com/iotacb/contao-smart-image-area"
+    },
+    "require": {
+        "php": "^8.3",
+        "contao/core-bundle": "^5.7",
+        "symfony/asset": "^7.4",
+        "symfony/dependency-injection": "^7.4",
+        "symfony/http-kernel": "^7.4",
+        "symfony/security-bundle": "^7.4",
+        "twig/twig": "^3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": { "iotacb\\SmartImageArea\\": "src/" }
+    },
+    "extra": {
+        "contao-manager-plugin": "iotacb\\SmartImageArea\\ContaoManager\\Plugin"
+    },
+    "archive": {
+        "exclude": [
+            "/node_modules",
+            "/tests/artifacts",
+            "/tests/fixtures"
+        ]
+    }
+}

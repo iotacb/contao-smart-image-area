@@ -1,0 +1,18 @@
+waSmartImageArea:
+    suggest: Bereich automatisch erkennen
+    restore: Vorherigen Bereich wiederherstellen
+    discard: Vorschlag verwerfen
+    badge: Vorschlag
+    loading: Bild wird nach Gesichtern, Motiven und Details analysiert…
+    faces: Vorschlag anhand der erkannten Gesichter.
+    objects: Vorschlag anhand des erkannten Motivs.
+    saliency: Vorschlag anhand von Bilddetails und Farben.
+    fallback: KI-Erkennung ist nicht verfügbar. Vorschlag anhand von Bilddetails und Farben.
+    pending: 'Noch nicht gespeichert: Mit „Speichern“ übernehmen oder mit der Maus einen eigenen Bereich ziehen.'
+    unchanged: Er entspricht dem bereits gespeicherten Bereich.
+    preserved: Der gespeicherte Bereich wird angezeigt. „Bereich automatisch erkennen“ erstellt einen neuen Vorschlag.
+    edited: Eigene Auswahl. Mit „Speichern“ übernehmen.
+    restored: Vorheriger Bereich wiederhergestellt.
+    discarded: Vorschlag verworfen. Es ist kein Bereich ausgewählt.
+    error: Kein Vorschlag möglich. Der Bereich kann weiterhin mit der Maus gezogen werden.
+    help: '„Bereich automatisch erkennen“ analysiert das Bild lokal im Browser: zuerst Gesichter, dann Motive wie Personen, Tiere oder Fahrzeuge, sonst markante Bilddetails. Das Bild wird nicht hochgeladen. Der Vorschlag ersetzt den gespeicherten Bereich erst mit „Speichern“.'

@@ -1,0 +1,13 @@
+* text=auto
+*.wasm binary
+*.tflite binary
+# Vendored runtime files must stay byte-identical to the hashes in public/vendor/manifest.json.
+/public/vendor/** -text
+
+# Keep development files out of the Composer/Packagist download.
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/tests export-ignore
+/tools export-ignore

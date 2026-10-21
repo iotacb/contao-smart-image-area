@@ -1,0 +1,101 @@
+/* An unsaved suggestion replaces Contao's selection frame until it is edited, undone or saved. */
+.wa-image-area-layer {
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.tl_edit_preview[data-wa-state="suggested"] .tl_edit_preview_important_part {
+    visibility: hidden;
+}
+
+.wa-image-area-suggestion {
+    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid var(--contao, #f47c00);
+    box-shadow: 0 0 0 100vmax rgb(0 0 0 / 45%), inset 0 0 0 1px rgb(0 0 0 / 25%);
+}
+
+.wa-image-area-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 6px 3px 4px;
+    border-bottom-right-radius: var(--border-radius, 4px);
+    background: var(--contao, #f47c00);
+    color: #111;
+    font-size: .6875rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* Detected faces or subjects the suggested area is based on. */
+.wa-image-area-subject {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px dashed rgb(255 255 255 / 90%);
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 25%), inset 0 0 0 1px rgb(0 0 0 / 25%);
+}
+
+.tl_edit_preview[data-wa-state="busy"] .wa-image-area-layer {
+    background: rgb(0 0 0 / 15%);
+}
+
+.tl_edit_preview[data-wa-state="busy"] .wa-image-area-layer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgb(244 124 0 / 40%), transparent) no-repeat;
+    background-size: 35% 100%;
+    animation: wa-image-area-scan 1.6s ease-in-out infinite;
+}
+
+.wa-image-area [data-status]:empty {
+    display: none;
+}
+
+.wa-image-area [data-status][data-note],
+.wa-image-area [data-status][data-message="error"] {
+    padding: 3px 0 3px 9px;
+    border-left: 3px solid var(--contao, #f47c00);
+    color: var(--text);
+    font-size: .8125rem;
+}
+
+.wa-image-area [data-status][data-message="error"] {
+    border-left-color: var(--red, #c7241f);
+}
+
+.wa-image-area [data-status][data-message="loading"]::before {
+    content: "";
+    display: inline-block;
+    width: .75em;
+    height: .75em;
+    margin-right: .5em;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    vertical-align: -.1em;
+    animation: wa-image-area-spin .8s linear infinite;
+}
+
+@keyframes wa-image-area-scan {
+    from { background-position: -55% 0; }
+    to { background-position: 155% 0; }
+}
+
+@keyframes wa-image-area-spin {
+    to { transform: rotate(1turn); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tl_edit_preview[data-wa-state="busy"] .wa-image-area-layer::after,
+    .wa-image-area [data-status][data-message="loading"]::before {
+        animation: none;
+    }
+
+    .tl_edit_preview[data-wa-state="busy"] .wa-image-area-layer::after {
+        background: rgb(244 124 0 / 15%);
+    }
+}

@@ -1,0 +1,18 @@
+waSmartImageArea:
+    suggest: Detect area automatically
+    restore: Restore previous area
+    discard: Discard suggestion
+    badge: Suggestion
+    loading: Analysing the image for faces, subjects and visual detail…
+    faces: Suggestion based on the detected faces.
+    objects: Suggestion based on the detected subject.
+    saliency: Suggestion based on visual detail and colour.
+    fallback: AI detection is unavailable. Suggestion based on visual detail and colour.
+    pending: 'Not saved yet: click Save to keep it, or drag with the mouse to draw your own area.'
+    unchanged: This matches the area that is already saved.
+    preserved: Showing the saved area. “Detect area automatically” creates a new suggestion.
+    edited: Your own selection is used. Click Save to keep it.
+    restored: Previous area restored.
+    discarded: Suggestion discarded. No area is selected.
+    error: No suggestion could be generated. You can still draw the area with the mouse.
+    help: '“Detect area automatically” analyses the image locally in your browser: faces first, then subjects such as people, animals or vehicles, otherwise visual detail. The image is not uploaded. The suggestion only replaces the stored area when you click Save.'
